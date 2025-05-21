@@ -11,6 +11,7 @@ use Asantibanez\LivewireCharts\Models\PieChartModel;
 use Asantibanez\LivewireCharts\Models\RadarChartModel;
 use Asantibanez\LivewireCharts\Models\RadialChartModel;
 use Asantibanez\LivewireCharts\Models\TreeMapChartModel;
+use Asantibanez\LivewireCharts\Models\BoxPlotChartModel;
 
 class LivewireCharts
 {
@@ -61,5 +62,10 @@ class LivewireCharts
     public function radialChartModel(): RadialChartModel
     {
         return new RadialChartModel();
+    }
+
+    public function BoxPlotChartModel(): BoxPlotChartModel
+    {
+        return new BoxPlotChartModel();
     }
 }

@@ -9,6 +9,7 @@ use Asantibanez\LivewireCharts\Charts\LivewirePieChart;
 use Asantibanez\LivewireCharts\Charts\LivewireRadarChart;
 use Asantibanez\LivewireCharts\Charts\LivewireRadialChart;
 use Asantibanez\LivewireCharts\Charts\LivewireTreeMapChart;
+use Asantibanez\LivewireCharts\Charts\LivewireBoxPlotChart;
 use Asantibanez\LivewireCharts\Console\InstallCommand;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
@@ -75,6 +76,7 @@ class LivewireChartsServiceProvider extends ServiceProvider
         Livewire::component('livewire-radar-chart', LivewireRadarChart::class);
         Livewire::component('livewire-tree-map-chart', LivewireTreeMapChart::class);
         Livewire::component('livewire-radial-chart', LivewireRadialChart::class);
+        Livewire::component('livewire-box-plot-chart', LivewireBoxPlotChart::class);
     }
 
     private function registerDirectives()

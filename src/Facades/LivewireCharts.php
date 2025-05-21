@@ -9,6 +9,7 @@ use Asantibanez\LivewireCharts\Models\PieChartModel;
 use Asantibanez\LivewireCharts\Models\RadarChartModel;
 use Asantibanez\LivewireCharts\Models\RadialChartModel;
 use Asantibanez\LivewireCharts\Models\TreeMapChartModel;
+use Asantibanez\LivewireCharts\Models\BoxPlotChartModel;
 use Illuminate\Support\Facades\Facade;
 
 /**
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static RadarChartModel radarChartModel()
  * @method static TreeMapChartModel treeMapChartModel()
  * @method static RadialChartModel radialChartModel()
+ * @method static BoxPlotChartModel boxPlotChartModel()
  */
 class LivewireCharts extends Facade
 {
