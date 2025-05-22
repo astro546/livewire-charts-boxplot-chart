@@ -19,11 +19,13 @@ class BoxPlotChartModel extends BaseChartModel
     $this->data = collect();
   }
 
-  public function addBox($title, $valuesSet)
+  public function addBox($title, $value, $extras = [])
+  
   {
     $this->data->push([
       'title' => $title,
-      'valuesSet' => $valuesSet
+      'valuesSet' => $value,
+      'extras' => $extras
     ]);
 
     return $this;

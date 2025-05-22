@@ -27,6 +27,7 @@ const boxPlotChart = () => {
             const series = [
                 {
                     name: title,
+                    type: "boxPlot",
                     data: data.map((item) => item.value),
                 },
             ];
@@ -43,15 +44,22 @@ const boxPlotChart = () => {
                     animations: { enabled: animated },
                     toolbar: { show: false },
 
-                    events: {},
+                    events: {
+                        markerClick: function (event, chartContext, {}) {},
+                    },
                 },
 
                 dataLabels: dataLabels,
                 theme: component.get("boxPlotChartModel.theme") || {},
 
+                title: {
+                    text: title,
+                    align: "left",
+                },
+
                 toolTip: {
                     y: {
-                        formatter: function (values, series) {
+                        formatter: function (value, series) {
                             return (
                                 data[series.dataPointIndex].extras.tooltip ||
                                 value
@@ -65,6 +73,7 @@ const boxPlotChart = () => {
                 this.$refs.container,
                 mergedOptionsWithJsonConfig(options, jsonConfig)
             );
+
             this.chart.render();
         },
     };
