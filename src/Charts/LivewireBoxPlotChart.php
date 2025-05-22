@@ -14,10 +14,10 @@ class LivewireBoxPlotChart extends Component
   public $boxPlotChartModel;
 
   public function mount(BoxPlotChartModel $boxPlotChartModel){
-    $this->boxPlotChartModel = $boxPlotChartModel;
+    $this->boxPlotChartModel = $boxPlotChartModel->toArray();
   }
 
-  public function reder()
+  public function render()
   {
     return view('livewire-charts::livewire-box-plot-chart');
   }
